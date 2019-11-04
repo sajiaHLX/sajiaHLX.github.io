@@ -149,7 +149,8 @@
   
 
         
-        <a href="/2019/11/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9C%8B%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        
+<a href="/2019/11/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9C%8B%E9%97%AE%E9%A2%98/" class="archive-article-date">
   	<time datetime="2019-11-04T04:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
 </a>
         
@@ -226,7 +227,8 @@
   
 
         
-        <a href="/2019/11/01/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="archive-article-date">
+        
+<a href="/2019/11/01/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="archive-article-date">
   	<time datetime="2019-11-01T08:46:53.221Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
 </a>
         
@@ -285,19 +287,20 @@
 
 
   
-    <article id="post-something about css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Something about css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/01/something%20about%20css/">something about css</a>
+      <a class="article-title" href="/2019/11/01/Something%20about%20css/">Something about css</a>
     </h1>
   
 
         
-        <a href="/2019/11/01/something%20about%20css/" class="archive-article-date">
+        
+<a href="/2019/11/01/Something%20about%20css/" class="archive-article-date">
   	<time datetime="2019-11-01T08:46:53.206Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
 </a>
         
@@ -307,7 +310,7 @@
       
         <h4 id="1-弹性盒子布局（Flexible-Box）"><a href="#1-弹性盒子布局（Flexible-Box）" class="headerlink" title="1.弹性盒子布局（Flexible Box）"></a>1.弹性盒子布局（Flexible Box）</h4><p>注意设置flex布局后，子元素的float，clear，vertical-align属性将失效，所有子元素自动成为容器的成员，称为flex item。</p>
         
-          <a class="article-more-a" href="/2019/11/01/something%20about%20css/#more">more >></a>
+          <a class="article-more-a" href="/2019/11/01/Something%20about%20css/#more">more >></a>
         
       
 
@@ -320,7 +323,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/01/something%20about%20css/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/01/Something%20about%20css/">展开全文 >></a>
         </p>
       
 
@@ -362,7 +365,8 @@
   
 
         
-        <a href="/2019/11/01/AJAX/" class="archive-article-date">
+        
+<a href="/2019/11/01/AJAX/" class="archive-article-date">
   	<time datetime="2019-11-01T08:46:53.193Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
 </a>
         
@@ -418,194 +422,6 @@
 
 
   
-    <article id="post-webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/31/webpack/">webpack</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/31/webpack/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:21:34.784Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><ul>
-<li><p><strong>认识webpack</strong></p>
-<ul>
-<li>从本质上来说，webpack是一个现代JavaScript应用的静态模块打包工具</li>
-<li>和grunt/gulp的对比<ul>
-<li>grunt和gulp的核心是task</li>
-<li>我们可以配置一系列的task，并且定义task要处理的事务（例如es、6ts转化、图片压缩、scss转成css）</li>
-<li>之后让grunt/gulp来依次执行这些task，而且让整个流程自动化</li>
-<li>所以grunt/gulp也被称为前端自动化任务管理工具</li>
-<li>只需要进行简单的合并，压缩，就使用grunt/gulp即可</li>
-</ul>
-</li>
-<li>webpack更加强调模块化开发管理，而文件压缩合并，预处理等功能，是他附带的功能</li>
-</ul>
-</li>
-<li><p><strong>webpack的安装</strong></p>
-<ul>
-<li>npm install webpack</li>
-</ul>
-</li>
-<li><p><strong>webpack的起步</strong></p>
-<ul>
-<li>webpack ./src/index.js ./dist/bundle.js</li>
-</ul>
-</li>
-<li><p><strong>webpack的配置</strong></p>
-<ul>
-<li><p>新建webpack.config.js文件</p>
-</li>
-<li><pre><code class="javascript"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">'path'</span>)
-
-<span class="built_in">module</span>.exports={
-  entry:<span class="string">'./src/index.js'</span>,
-  output:{
-    path:path.resolve(__dirname,<span class="string">'dist'</span>),
-    filename:<span class="string">'bundle.js'</span>
-  },
-}
-&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
-</li>
-</ul>
-</li>
-<li><p><strong>webpack中配置Vue</strong></p>
-<ul>
-<li><pre><code class="javascript">npm install vue --save
-npm install --save-dev vue-loader vue-template-comiler
-&lt;!--￼<span class="number">1</span>--&gt;</code></pre>
-</li>
-<li><p>App.vue文件中</p>
-</li>
-<li><pre><code class="vue">&lt;template&gt;
-  &lt;div id=&quot;app&quot;&gt;
-    &lt;h2 class=&quot;class&quot;&gt;{{message}}&lt;/h2&gt;
-      {{message}}
-      &lt;Cpn&gt;&lt;/Cpn&gt;
-      &lt;button @click=&quot;btnclick&quot;&gt;按钮&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {
-  name:&apos;App&apos;
-  data () {
-    return {
-      message: &apos;hello webpack&apos;
-    }
-  },
-  methods: {
-    btnclick() {
-      console.log(&quot;i am hlx&quot;);
-    },
-  }
-}
-
-&lt;/script&gt;
-&lt;style scoped&gt;
-  .class{
-    color: antiquewhite
-  }
-&lt;/style&gt;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在index.js文件中</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">	import Vue from &apos;vue&apos;</span><br><span class="line">	import App from &apos;./vue/App.vue&apos;</span><br><span class="line">	new Vue(&#123;</span><br><span class="line">	  el:&apos;#app&apos;,</span><br><span class="line">	  template:`&lt;App&gt;&lt;/App&gt;`,</span><br><span class="line">	  components:&#123;</span><br><span class="line">	    App</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></code></pre>
-</li>
-</ul>
-</li>
-<li><p><strong>plugin的使用</strong></p>
-<ul>
-<li><p>plugin是插件的意思，通常是用于对某个现有的架构进行扩展</p>
-</li>
-<li><pre><code class="javascript"><span class="keyword">const</span> path=<span class="built_in">require</span>(<span class="string">'path'</span>)
-<span class="comment">//添加注释需要用的</span>
-<span class="keyword">const</span> webpack=<span class="built_in">require</span>(<span class="string">'webpack'</span>)
-<span class="comment">//打包HTML需要用的</span>
-<span class="keyword">const</span> HtmlWebpackPlugin=<span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>)
-<span class="comment">//压缩js代码需要的</span>
-<span class="keyword">const</span> UglifyjsWebpackPlugin=<span class="built_in">require</span>(<span class="string">'uglifyjs-webpack-plugin'</span>)
-
-<span class="built_in">module</span>.exports={
-    entry:<span class="string">'./src/index.js'</span>,
-    output:{
-        path:path.resolve(__dirname,<span class="string">'dist'</span>),
-        filename:<span class="string">'bundle.js'</span>,
-    },
-    <span class="built_in">module</span>:{
-        rules:[
-            {
-                test:<span class="regexp">/\.css$/</span>,
-                use:[<span class="string">'style-loader'</span>,<span class="string">'css-loader'</span>]
-            },
-        ]
-    },
-    plugins:[
-        <span class="comment">//添加注释</span>
-        <span class="keyword">new</span> webpack.BannerPlugin({
-            banner:<span class="string">'made by XXX'</span>
-        }),
-        <span class="comment">//打包html文件</span>
-        <span class="keyword">new</span> HtmlWebpackPlugin(),
-        <span class="keyword">new</span> UglifyjsWebpackPlugin()
-    ]
-}
-&lt;!--￼<span class="number">3</span>--&gt;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/31/webpack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -623,6 +439,17 @@ export default {
       	</div>
     </div>
   </div>
+  
+    <!-- 不蒜子统计 -->
+    <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+            本站访客数<span id="busuanzi_value_site_uv"></span>人
+    </span>
+    <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 </footer>
     </div>
     <script>
