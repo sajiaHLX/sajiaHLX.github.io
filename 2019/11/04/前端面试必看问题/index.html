@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | webStudy</title>
+  <title>前端面试必看问题 | webStudy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="webStudy">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;10&#x2F;index.html">
+  <meta name="description" content="document.parentNode和document.parentnode有什么区别？第一个是document中本身就有的属性，值为null，第二个是document中没有的属性，值为undefined。 如何规避多人开发函数重名的问题？基于单例模式实现模块开发，把实现当前模块的属性和功能放在一个同一个命名空间下">
+<meta name="keywords" content="面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试必看问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;04&#x2F;%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9C%8B%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="webStudy">
+<meta property="og:description" content="document.parentNode和document.parentnode有什么区别？第一个是document中本身就有的属性，值为null，第二个是document中没有的属性，值为undefined。 如何规避多人开发函数重名的问题？基于单例模式实现模块开发，把实现当前模块的属性和功能放在一个同一个命名空间下">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-04T04:20:06.061Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="webStudy" type="application/atom+xml">
@@ -135,49 +139,620 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端面试必看问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/webpack/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:21:34.784Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/webpack/">webpack</a>
+    <h1 class="article-title" itemprop="name">
+      前端面试必看问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/11/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9C%8B%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2019-11-04T04:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>document.parentNode和document.parentnode有什么区别？</strong><br>第一个是document中本身就有的属性，值为null，第二个是document中没有的属性，值为undefined。</p>
+<p><strong>如何规避多人开发函数重名的问题？</strong><br>基于单例模式实现模块开发，把实现当前模块的属性和功能放在一个同一个命名空间下</p>
+ <a id="more"></a> 
 
+<p><strong>你理解的闭包作用是什么，优缺点？</strong></p>
+<p>当内部函数 在定义它的作用域 的外部 被引用时,就创建了该内部函数的闭包 ,如果内部函数引用了位于外部函数的变量,当外部函数调用完毕后,这些变量在内存不会被 释放,因为闭包需要它们</p>
+<p>优点：</p>
+<p>1.可以读取到其他函数内部的变量<br>2.可以将变量保存在内存中 </p>
+<p>缺点：</p>
+<p>1.闭包会导致原有作用域链不释放，造成内存泄漏（内存占用）</p>
+<p><strong><code>代码题</code></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n=<span class="number">0</span>,</span><br><span class="line">    fn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.n*=<span class="number">2</span>;</span><br><span class="line">        n++;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line">            n+=++m;</span><br><span class="line">            <span class="built_in">console</span>.log(n);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">var</span> f=fn(<span class="number">2</span>);</span><br><span class="line">f(<span class="number">3</span>);  <span class="comment">//5</span></span><br><span class="line">fn(<span class="number">3</span>)(<span class="number">4</span>);<span class="comment">//16</span></span><br><span class="line">f(<span class="number">4</span>);<span class="comment">//21</span></span><br><span class="line"><span class="built_in">console</span>.log(n);<span class="comment">//21</span></span><br><span class="line">------------------------------------------------------------------<span class="keyword">let</span> i=<span class="number">2</span>;</span><br><span class="line"><span class="keyword">let</span> fn=<span class="function"><span class="keyword">function</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">        i *=<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line">        	i-= (n--)+(++m);</span><br><span class="line">            <span class="built_in">console</span>.log(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">let</span> f=fn(<span class="number">1</span>);</span><br><span class="line">f(<span class="number">2</span>);<span class="comment">//0</span></span><br><span class="line">fn(<span class="number">3</span>)(<span class="number">4</span>);<span class="comment">//-8</span></span><br><span class="line">f(<span class="number">5</span>);<span class="comment">//-14</span></span><br><span class="line"><span class="built_in">console</span>.log(i);<span class="comment">//-14</span></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line"><span class="keyword">let</span> n=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> x=&#123;</span><br><span class="line">    n:<span class="number">2</span>;</span><br><span class="line">    y:(<span class="function"><span class="keyword">function</span>(<span class="params">n</span>)</span>&#123; <span class="comment">//n=undefined</span></span><br><span class="line">        n=n||<span class="number">3</span>; <span class="comment">//n=3</span></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line">            m=m||<span class="number">4</span>;</span><br><span class="line">            <span class="keyword">this</span>.n+=m++;</span><br><span class="line">            n+=++m;</span><br><span class="line">            <span class="built_in">console</span>.log(n);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)(<span class="built_in">window</span>.n) <span class="comment">//把window属性下的n传给函数，但是此时window下没有n，所以是undefined</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> z=x.y;</span><br><span class="line">x.y(<span class="number">5</span>); <span class="comment">//10  this：x/</span></span><br><span class="line">z(<span class="number">6</span>); <span class="comment">//18</span></span><br><span class="line"><span class="built_in">console</span>.log(n,x.n);<span class="comment">//1  7</span></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line"><span class="keyword">let</span> a=&#123;<span class="attr">n</span>:<span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> b=a;</span><br><span class="line">b.x=a=&#123;<span class="attr">n</span>:<span class="number">10</span>&#125;;<span class="comment">//b.x给b添加新的属性，a给a重新定向到新的堆内存</span></span><br><span class="line"><span class="built_in">console</span>.log(a.x); <span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(b.x); <span class="comment">//&#123;n:10&#125;</span></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C1</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (name) <span class="keyword">this</span>.name = name; <span class="comment">//if不成立，没有给实例设置私有属性</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C2</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;<span class="comment">//给实例设置私有属性，undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C3</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name || <span class="string">'join'</span>; <span class="comment">//给实例设置属性join</span></span><br><span class="line">&#125;</span><br><span class="line">C1.prototype.name = <span class="string">"Tom"</span>;</span><br><span class="line">C2.prototype.name = <span class="string">"Tom"</span>;</span><br><span class="line">C3.prototype.name = <span class="string">"Tom"</span>;</span><br><span class="line">alert(<span class="keyword">new</span> C1().name + <span class="keyword">new</span> C2().name + <span class="keyword">new</span> C3().name);<span class="comment">//tomundefinedjoin</span></span><br><span class="line">------------------------------------------------------------------</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">0</span>,</span><br><span class="line">	b=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">	A=<span class="function"><span class="keyword">function</span>(<span class="params">b</span>)</span>&#123; <span class="comment">//第一次执行到此处将A指向了里面的这个function，第二次调用A时，直接调用里面的这个函数。</span></span><br><span class="line">		alert(a+b++);</span><br><span class="line">	&#125;;</span><br><span class="line">	alert(a++);</span><br><span class="line">&#125;</span><br><span class="line">A(<span class="number">1</span>);<span class="comment">//1</span></span><br><span class="line">A(<span class="number">2</span>);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>写出你熟知的ES6新语法</strong></p>
+<ul>
+<li><p>let/const</p>
+<ul>
+<li>不存在变量提升机制（变量不允许在声明之前使用）</li>
+<li>let不允许重复声明</li>
+<li>在全局中基于let声明的变量和window的不是一个属性，和他没关系</li>
+<li>typeof 未被声明的变量   =&gt;不是undefined而是报错（暂时性死区）</li>
+<li>let会形成块级作用域（类似私有作用域，大部分大括号也会形成块级作用域）</li>
+</ul>
+</li>
+<li><p>解构赋值</p>
+</li>
+<li><p>“…”拓展，剩余，展开运算符</p>
+</li>
+<li><p>箭头函数</p>
+<ul>
+<li>没有arguments，但是可以基于 …arg获取实参集合（结果是一个数组）</li>
+<li>没有自己的this，箭头函数中的this是上下文的this</li>
+</ul>
+</li>
+<li><p>ES6中的模板字符串</p>
+</li>
+<li><p>promise（async/await）</p>
+</li>
+<li><p>class（ES6创建类的）</p>
+</li>
+<li><p>interator（for of 循环）</p>
+</li>
+<li><p>map/set</p>
+</li>
+<li><p>……………….</p>
+</li>
+</ul>
+<p><strong>重排和重绘的读写分离</strong></p>
+<p>思路：</p>
+<p>​    1.首先什么是重排和重绘</p>
+<p>​    2.突出他们消耗性能</p>
+<p>​    3.突出自己写项目的时候注重了这些事情，以及自己解决的一些方案</p>
+<p>浏览器渲染一个项目的时候是先按照“先创建DOM树 -&gt; 在加载CSS -&gt; 生成渲染树RENDER TREE -&gt; 把渲染树交给浏览器（GPU）进行绘制”，如果后期我们修改了元素的样式（但是没有修改大小和位置），浏览器会把当前元素生成渲染树，然后重新渲染，这个机制是重绘，但是一旦元素的位置和大小发生改变，浏览器就要重新计算渲染，这个机制是回流（重排），不论是重排还是重绘都非常的消耗性能</p>
+<p>在我以前的项目中，我特意的重视了这个问题，尽量减少操作DOM引发的回流和重绘的问题，常用的解决方案是：</p>
+<p>​    1.需要动态的向页面追加元素的时候，基于文档碎片或者先把需要增加的所有元素拼接成字符串，最后统一进行增加</p>
+<p>​    2.读写分离：把统一修改样式都存放到一起执行，新版的浏览器都有自己的监测机制，如果发现下面紧挨着的操作也是修改元素的样式，会把所有修改的事先存起来，直到遇到非修改样式的操作，会把之前存储的统一执行，引发一次回流和重绘</p>
+<p>我认为这是比较重要的两种减少回流的方式。</p>
+<p><strong>用户昵称规定只能是“数字，大小写字母”组成并且不能少于2位，不能多于20位，写出这个正则表达式</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg=<span class="string">'/^[0-9a-zA-Z]&#123;2,20&#125;$/'</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>谈谈你对面向对象的理解</strong></p>
+<p>面向对象语言（Object-Oriented Language）是一类以对象作为基本程序结构单位的程序设计语言，指用于描述的设计是以对象为核心，而对象是程序运行时刻的基本成分</p>
+<p>一切都是类、<strong>一切都是对象</strong></p>
+<p>对象的基本特征：</p>
+<p>​    1.封装：将一个个独立的功能设计成一个个独立的单元，形成一个有规划设计的整体，减小耦合，提高内聚，避免迁一发而动全身，方便对程序的修改</p>
+<p>​    2.继承：继承发生在两个对象之间，继承对象可以肆意的使用被继承对象的一些属性，方法和函数等；使代码重用，减少碼量，间接减少维护成本</p>
+<p>​    3.多态：不同场合做出不同相应，有着不同的特点，可以说是封装的一个实现·······</p>
+<p><strong>代码题</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> point = &#123;</span><br><span class="line">    x: <span class="number">10</span>,</span><br><span class="line">    y: <span class="number">20</span>,</span><br><span class="line">    moveTo: <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//this:point</span></span><br><span class="line">        <span class="keyword">var</span> moveX = <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">            <span class="comment">//this.window</span></span><br><span class="line">            <span class="keyword">this</span>.x = x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> moveY = <span class="function"><span class="keyword">function</span> (<span class="params">y</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.y = y;</span><br><span class="line">        &#125;</span><br><span class="line">        moveX(x);</span><br><span class="line">        moveY(y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">point.moveTo(<span class="number">100</span>,<span class="number">200</span>);</span><br><span class="line"><span class="built_in">console</span>.log(point.x,point.y);<span class="comment">//10 20</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>代码题</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">this</span>.b=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">fun.prototype=&#123;		<span class="comment">//原型重定向后construct会不在，需要自己创建</span></span><br><span class="line">    b:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a=<span class="number">20</span>;</span><br><span class="line">        alert(<span class="keyword">this</span>.a);</span><br><span class="line">    &#125;,</span><br><span class="line">    c:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a=<span class="number">30</span>;	<span class="comment">//my_fun</span></span><br><span class="line">        alert(<span class="keyword">this</span>.a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> my_fun=<span class="keyword">new</span> fun();</span><br><span class="line">my_fun.b(); 	<span class="comment">//10</span></span><br><span class="line">my_fun.c();		<span class="comment">//30</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>代码题</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n=<span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> n=<span class="number">3</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line">        alert(++n+m);</span><br><span class="line">    &#125;</span><br><span class="line">    b(<span class="number">4</span>);</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c=a(<span class="number">5</span>); <span class="comment">//8</span></span><br><span class="line">c(<span class="number">6</span>);<span class="comment">//11</span></span><br><span class="line">alert(n);<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>谈一下你对作用域链和原型链的理解</strong></p>
+<p><code>私有作用域</code>：函数执行会创建一个私有作用域，形参和在当前私有作用域中声明的都是私有变量，当前的私有作用域有自我保护机制，私有变量和外界是没有关系的，但是私有作用域中遇到了一个非私有的变量，则会向他的上级去寻找，如果还不是上级作用域私有的，则继续向上寻找，一直找到window为止，这种变量一层层向上查找的机制就是“作用域链机制”</p>
+<p><code>原型链</code>：他也是一种查找机制，实例首先在自己的私有属性中进行属性查找，如果不是私有属性，基于__proto__向所属类的原型上进行查找，如果再找不到，则继续基于__proto__向上查找，一直找到Object.prototype为止</p>
+<p><strong>实现数组去重的方法</strong></p>
+<p>1.利用ES6的set去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line"><span class="built_in">console</span>.log(unique(arr))</span><br><span class="line"> <span class="comment">//[1, "true", true, 15, false, undefined, null, NaN, "NaN", 0, "a", &#123;&#125;, &#123;&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<p>无法去除空对象。</p>
+<p>2.利用for循环嵌套for循环,然后splice去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;            </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> j=i+<span class="number">1</span>; j&lt;arr.length; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[i]==arr[j])&#123;         <span class="comment">//第一个等同于第二个，splice方法删除第二个</span></span><br><span class="line">                    arr.splice(j,<span class="number">1</span>);</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">    <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line">    <span class="comment">//[1, "true", 15, false, undefined, NaN, NaN, "NaN", "a", &#123;…&#125;, &#123;…&#125;]     //NaN和&#123;&#125;没有去重，两个null直接消失了</span></span><br></pre></td></tr></table></figure>
+
+<p>3.利用indexOf去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> array = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array .indexOf(arr[i]) === <span class="number">-1</span>) &#123;</span><br><span class="line">            array .push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line"><span class="built_in">console</span>.log(unique(arr))</span><br><span class="line">   <span class="comment">// [1, "true", true, 15, false, undefined, null, NaN, NaN, "NaN", 0, "a", &#123;…&#125;, &#123;…&#125;]  //NaN、&#123;&#125;没有去重</span></span><br></pre></td></tr></table></figure>
+
+<p>创建一个新数组，利用for循环原数组判断新数组中是否存在，如果存在相同的值则跳过，没有则push进数组</p>
+<p>4.利用sort()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    arr = arr.sort()</span><br><span class="line">    <span class="keyword">var</span> arrry= [arr[<span class="number">0</span>]];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] !== arr[i<span class="number">-1</span>]) &#123;</span><br><span class="line">            arrry.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arrry;</span><br><span class="line">&#125;</span><br><span class="line">     <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">        <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line"><span class="comment">// [0, 1, 15, "NaN", NaN, NaN, &#123;…&#125;, &#123;…&#125;, "a", false, null, true, "true", undefined]  //NaN、&#123;&#125;没有去重</span></span><br></pre></td></tr></table></figure>
+
+<p>利用sort()排序方法，然后根据排序后的结果进行遍历及相邻元素比对</p>
+<p>5.利用对象的属性不能相同的特点去重</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.myUnique=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//this:ary 我们需要操作的数组，如果不想改变原有的数组，则克隆一份，处理克隆的数组</span></span><br><span class="line">	<span class="keyword">let</span> _this=<span class="keyword">this</span>.slice(<span class="number">0</span>);</span><br><span class="line">	<span class="comment">//或者_this=[...this];也可以实现克隆</span></span><br><span class="line">	<span class="keyword">let</span> obj=&#123;&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;_this.length;i++)&#123;</span><br><span class="line">		<span class="keyword">let</span> item=_this[i];</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> obj[item]!==<span class="string">'undefined'</span>)&#123;</span><br><span class="line">			<span class="comment">//当前项在数组中已经存在，需要将它除掉</span></span><br><span class="line">			<span class="comment">// _this.splice(i,1);  后面项移位，会消耗性能</span></span><br><span class="line">        	_this[i]=_this[_this.length<span class="number">-1</span>]; <span class="comment">//将最后一位的值付给当前项</span></span><br><span class="line">       		 _this.length--;<span class="comment">//去除最后一项</span></span><br><span class="line">       		 i--;<span class="comment">//继续判断当前位</span></span><br><span class="line">        	 <span class="keyword">continue</span>;</span><br><span class="line">     	&#125;</span><br><span class="line">     	obj[item]=<span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    obj=<span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> _this;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> ary=[<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line"><span class="keyword">let</span> uniqueAry =ary.myUnique();</span><br><span class="line"><span class="built_in">console</span>.log(uniqueAry);  <span class="comment">//两个true，NaN被去除了</span></span><br></pre></td></tr></table></figure>
+
+<p>6.利用includes</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> array =[];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>( !array.includes( arr[i]) ) &#123;<span class="comment">//includes 检测数组是否有某个值</span></span><br><span class="line">                    array.push(arr[i]);</span><br><span class="line">              &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line"><span class="built_in">console</span>.log(unique(arr))</span><br></pre></td></tr></table></figure>
+
+<p>7.利用hasOwnProperty</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> obj.hasOwnProperty(<span class="keyword">typeof</span> item + item) ? <span class="literal">false</span> : (obj[<span class="keyword">typeof</span> item + item] = <span class="literal">true</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">        <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line"><span class="comment">//[1, "true", true, 15, false, undefined, null, NaN, "NaN", 0, "a", &#123;…&#125;]   //所有的都去重了</span></span><br></pre></td></tr></table></figure>
+
+<p>利用hasOwnProperty 判断是否存在对象属性</p>
+<p>8.利用filter</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素</span></span><br><span class="line">    <span class="keyword">return</span> arr.indexOf(item, <span class="number">0</span>) === index;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line">        <span class="built_in">console</span>.log(unique(arr))</span><br><span class="line"><span class="comment">//[1, "true", true, 15, false, undefined, null, "NaN", 0, "a", &#123;…&#125;, &#123;…&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<p>9.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ary=[<span class="number">1</span>,<span class="number">1</span>,<span class="string">'true'</span>,<span class="string">'true'</span>,<span class="literal">true</span>,<span class="literal">true</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="literal">false</span>,<span class="literal">false</span>, <span class="literal">undefined</span>,<span class="literal">undefined</span>, <span class="literal">null</span>,<span class="literal">null</span>, <span class="literal">NaN</span>, <span class="literal">NaN</span>,<span class="string">'NaN'</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="string">'a'</span>, <span class="string">'a'</span>,&#123;&#125;,&#123;&#125;];</span><br><span class="line"><span class="keyword">let</span> uniqueAry=[...new <span class="built_in">Set</span>(ary)];</span><br><span class="line"><span class="built_in">console</span>.log(uniqueAry);</span><br></pre></td></tr></table></figure>
+
+<p><strong>常用的算法</strong></p>
+<p>1.递归</p>
+<p>​    运用递归实现数组扁平化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ary=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>,[<span class="number">5</span>,<span class="number">6</span>,[<span class="number">7</span>,<span class="number">8</span>]],[<span class="number">9</span>,<span class="number">10</span>]]];</span><br><span class="line">        <span class="keyword">let</span> result=[];</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">ary</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(ary.length===<span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;ary.length;i++)&#123;</span><br><span class="line">                <span class="keyword">let</span> item=ary[i];</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">typeof</span> item===<span class="string">'object'</span>)&#123;</span><br><span class="line">                    fn(item);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    result.push(item);    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        fn(ary);</span><br><span class="line">        <span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>2.去重</p>
+<p>3.冒泡排序</p>
+<p>4.插入排序</p>
+<p>5.快速排序</p>
+<p>6.时间复杂度</p>
+<p>7.空间负责度</p>
+<p>8.KMP</p>
+<p>…..</p>
+<p><strong>你所掌握的继承的方式，以及什么时候使用到了继承</strong></p>
+<p>面向对象：类的继承封装和多态</p>
+<p>​    [封装]</p>
+<p>​        把实现一个功能的JS代码进行封装，主要目的：“低耦合高内聚”</p>
+<p>​    [多态]</p>
+<p>​        重载：方法名相同，参数的个数或者类型不同，此时名字相同的方法才叫做方法的重载（后台语言中的重载）</p>
+<p>（JS中的重载是根据传递参数的不同实现不同的功能）</p>
+<p>​        重写：子类重写父类的方法</p>
+<p>​    [继承]</p>
+<p>​        子类继承父类的属性和方法</p>
+<p>​        1.原型继承：让子类的原型指向父类的实例。</p>
+<p>​        2.call继承：把父类A作为普通函数执行，让A中的THIS变为B的实例，相当于给B的实例增加一些属性和方法（弊端：把父类A当做普通函数执行，和父类原型没啥关系了，仅仅是把A中的私有属性变为子类B实例的私有属性而已，A原型上的共有属性方法和B及它的实例没啥关系）</p>
+<p>​        3.寄生组合继承：A的私有变为B的私有，A的共有变为B的共有</p>
+<p>​            object.creat:内置object类天生自带方法</p>
+<p>​                1.创建一个空对象</p>
+<p>​                2.让创建的空对象的__proto__指向第一个传进来的对象（把obj作为新创建空对象的原型）</p>
+<p>​        4.ES6中class类实现继承</p>
+<p>​        ….</p>
+<h3 id="JavaScript-（前端玩家必备技能）"><a href="#JavaScript-（前端玩家必备技能）" class="headerlink" title="JavaScript （前端玩家必备技能）"></a>JavaScript （前端玩家必备技能）</h3><ol>
+<li>ele.getAttribute(‘propName’) 和 ele.propName区别</li>
+<li>mouseover和mouseenter的区别</li>
+<li>什么是事件代理</li>
+<li>localStorage和cookie的区别，cookie和session的关系！</li>
+<li>什么是闭包，你在项目中哪一块用到了闭包！</li>
+<li>js中定义函数的方式有哪些，区别是什么！</li>
+<li>说出你掌握的继承方式及优缺点，并加以改进！</li>
+<li>说出ES6和ES5的区别！</li>
+<li>阐述JS中的同步编程和异步编程，以及你在项目中是如何来使用异步操作的！</li>
+<li>实现一个Promise</li>
+</ol>
+<h3 id="HTTP-amp-amp-AJAX-amp-amp-跨域-（18-玩家必备技能，初级玩家需要了解一些的）"><a href="#HTTP-amp-amp-AJAX-amp-amp-跨域-（18-玩家必备技能，初级玩家需要了解一些的）" class="headerlink" title="HTTP &amp;&amp; AJAX &amp;&amp; 跨域 （18+玩家必备技能，初级玩家需要了解一些的）"></a>HTTP &amp;&amp; AJAX &amp;&amp; 跨域 （18+玩家必备技能，初级玩家需要了解一些的）</h3><ol>
+<li>写出项目中经常用到的性能优化方案</li>
+<li>从浏览器地址栏输入URL到显示页面，中间都经历了什么（尽可能写详细，最好回答出TCP的三次握手和四次挥手，以及浏览器加载页面的细节）</li>
+<li>说出你所熟知的HTTP状态码！GET和POST有啥区别！</li>
+<li>什么是HTTP报文，你熟知的报文都有哪些！</li>
+<li>能说下304具体怎样实现吗？</li>
+<li>跨域是什么？http协议中如何判断跨域？如何解决跨域问题？</li>
+<li>HTTP2具体内容？SDPY了解么？</li>
+<li>HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？</li>
+<li>DNS劫持是什么？</li>
+<li>封装一个AJAX库！</li>
+</ol>
+<p><strong>页面导入样式时，使用link和@import有什么区别？</strong></p>
+<p>区别：</p>
+<ul>
+<li>首先link是HTML标签，而@import是css提供的</li>
+<li>link引入的样式页面加载时同时加载，@import引入的样式需要等到页面加载完成的时候加载</li>
+<li>link没有兼容性的问题，@import不兼容ie5以下</li>
+<li>link可以通过JS操作dom动态引入样式表改变样式，而@import不可以</li>
+</ul>
+<p><strong>圣杯布局和双飞翼布局的理解和区别？</strong></p>
+<p>作用：双飞翼布局和圣杯布局解决的问题是一样的，就是两边顶宽，中间自适应的三栏布局，中间栏要放在文档流的前面优先渲染。</p>
+<p>区别：圣杯布局，为了中间div的内容不被遮挡，将中间div设置了左右padding-left和padding-right后，将左右两个div用相对布局position：relative并分别配合right和left属性，以便左右两栏div移动后不遮挡中间的div。双飞翼布局，为了中间内容不被遮挡，直接在中间div内部创建子div用于放置内容，在该子div里用margin-left和margin-right为左右两栏div留出位置。</p>
+<p><strong>圣杯布局：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>圣杯布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        header,</span><br><span class="line">        footer &#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            width: 100%;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#bbbbbb</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">            height: 300px;</span><br><span class="line"></span><br><span class="line">            padding-left: 200px;</span><br><span class="line">            padding-right: 300px; </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.container</span> <span class="selector-tag">div</span>&#123;</span></span><br><span class="line">            float: left;</span><br><span class="line">            </span><br><span class="line"><span class="css">            <span class="comment">/* 圣杯布局 */</span></span></span><br><span class="line"><span class="css">            <span class="selector-tag">position</span><span class="selector-pseudo">:relative</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.left</span> &#123;</span></span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#DC698A</span>;</span></span><br><span class="line"></span><br><span class="line">            margin-left: -100%;</span><br><span class="line"><span class="css">            <span class="comment">/* 圣杯布局 */</span></span></span><br><span class="line"><span class="css">            <span class="selector-tag">left</span><span class="selector-pseudo">:-200px</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.middle</span> &#123;</span></span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#3EACDD</span>;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-class">.right</span> &#123;</span></span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#8CB08B</span>;</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">            margin-left: -300px;</span><br><span class="line"><span class="css">            <span class="comment">/* 圣杯布局 */</span></span></span><br><span class="line"><span class="css">            <span class="selector-tag">right</span><span class="selector-pseudo">:-300px</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span>头部<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"middle"</span>&gt;</span>中间栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>左栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>右栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span>底部<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>双飞翼布局：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>双飞翼布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">        body &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        header,</span><br><span class="line">        footer &#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            width: 100%;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#bbbbbb</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">            height: 300px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.container</span> <span class="selector-tag">div</span> &#123;</span></span><br><span class="line">            float: left;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.left</span> &#123;</span></span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#DC698A</span>;</span></span><br><span class="line">            margin-left: -100%;  </span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.middle</span> &#123;</span></span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#3EACDD</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.right</span> &#123;</span></span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#8CB08B</span>;</span></span><br><span class="line">            margin-left: -300px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="comment">/* 双飞翼布局 */</span></span></span><br><span class="line"><span class="css">        <span class="selector-class">.main</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">margin-left</span><span class="selector-pseudo">:200px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">margin-right</span><span class="selector-pseudo">:300px</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span>头部<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"middle"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>中间栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>左栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>右边栏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span>footer<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</strong></p>
+<p>生成随机数：Math.random()生成[0,1)的数，所以Math.random()*5生成[0,5)的数，Math.random()*31生成[0,31)的数，所以Math.random()*31+2生成[2,33)的数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addNum</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = sNum()</span><br><span class="line">    <span class="keyword">if</span> (arr.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr.indexOf(num) == <span class="number">-1</span>) &#123;</span><br><span class="line">            arr[i++] = num;</span><br><span class="line">            addNum();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            addNum();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sNum</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">31</span>) + <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">addNum()</span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+
+<p><strong>CSS3有哪些新增的特性？</strong></p>
+<ul>
+<li><strong>边框（borders）：</strong><ul>
+<li>border-radius 圆角</li>
+<li>box-shadow 盒子阴影</li>
+<li>border-image 边框图像</li>
+</ul>
+</li>
+<li><strong>背景：</strong><ul>
+<li>background-size 背景图片的尺寸</li>
+<li>background-origin 背景图片的定位区域</li>
+<li>background-clip 背景图片的绘制区域</li>
+</ul>
+</li>
+<li><strong>渐变：</strong><ul>
+<li>linear-gradient 线性渐变</li>
+<li>radial-gradient 径向渐变</li>
+</ul>
+</li>
+<li><strong>文本效果：</strong><ul>
+<li>word-break 规定非中日韩文本的换行规则</li>
+<li>word-wrap 允许对长的不可分割的单词进行分割并换行到下一行</li>
+<li>text-overflow 规定当文本溢出包含元素是发生的事情</li>
+<li>text-shadow 文本阴影效果</li>
+<li>text-wrap 规定文本的换行规则</li>
+<li>text-outline 规定文本的轮廓</li>
+<li>text-justify 规定当text-align设置为”justify”时所使用的对齐方法</li>
+</ul>
+</li>
+<li><strong>转换：</strong><ul>
+<li>2D转换属性</li>
+<li>transform</li>
+<li>transform-origin</li>
+<li>2D转换方法</li>
+<li>translate(x,y)</li>
+<li>translateX(n)</li>
+<li>translateY(n)</li>
+<li>rotate(angle)</li>
+<li>scale(n)</li>
+<li>scaleX(n)</li>
+<li>scaleY(n)</li>
+<li>rotate(angle)</li>
+<li>matrix(n,n,n,n,n,n)</li>
+</ul>
+</li>
+<li><strong>3D转换：</strong><ul>
+<li>transform</li>
+<li>transform-origin</li>
+<li>transform-style</li>
+<li>3D转换方法</li>
+<li>translate3d(x,y,z)</li>
+<li>translateX(x)</li>
+<li>translateY(y)</li>
+<li>translateZ(z)</li>
+<li>scale3d(x,y,z)</li>
+<li>scaleX(x)</li>
+<li>scaleY(y)</li>
+<li>scaleZ(z)</li>
+<li>rotate3d(x,y,z,angle)</li>
+<li>rotateX(x)</li>
+<li>rotateY(y)</li>
+<li>rotateZ(z)</li>
+<li>perspective(n)</li>
+</ul>
+</li>
+<li><strong>过渡：</strong><ul>
+<li>transition</li>
+</ul>
+</li>
+<li><strong>动画：</strong><ul>
+<li>@Keyframes规则</li>
+<li>animation</li>
+</ul>
+</li>
+<li><strong>弹性盒子（flexbox）</strong></li>
+<li><strong>多媒体查询@media</strong></li>
+</ul>
+<p><strong>HTML5新标签：（带有标记的就是）</strong></p>
+<ul>
+<li><a href="https://www.w3school.com.cn/tags/index.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/tags/index.asp</a></li>
+</ul>
+<p><strong>去除字符串中最后一个指定的字符</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> delLast=<span class="function"><span class="keyword">function</span>(<span class="params">str,del</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> str!==<span class="string">"string"</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"error"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> delNum=str.lastIndexOf(del);</span><br><span class="line">        str=str.substring(<span class="number">0</span>,delNum)+str.substring(delNum+<span class="number">1</span>,)</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(delLast(<span class="string">"fsdfaefdsdfdff"</span>,<span class="string">"f"</span>));</span><br></pre></td></tr></table></figure>
+
+<p><strong>HTML全局属性（global attribute）有哪些（包含H5）</strong></p>
+<ul>
+<li>accesskey:设置快捷键</li>
+<li>class:为元素设置类标识</li>
+<li>contenteditable:指定元素内容是否可编辑</li>
+<li>contextmenu:自定义鼠标右键弹出上下文菜单内容（仅firefox支持）</li>
+<li>data-*:为元素增加自定义属性</li>
+<li>dir：设置元素文本方向（默认ltr；rtl）</li>
+<li>draggable:设置元素是否可拖拽</li>
+<li>dropzone:设置元素拖放类型（copy|move|link,H5新属性，主流均不支持）</li>
+<li>hidden:规定元素仍未或不在相关</li>
+<li>id:元素id，文档内唯一</li>
+<li>lang:元素内容的语言</li>
+<li>spellcheck:是否启动拼写和语法检查</li>
+<li>style:行内css样式</li>
+<li>tabindex:设置元素可以获得焦点，通过tab导航</li>
+<li>title:规定元素有关的额外信息</li>
+<li>translate:元素和子孙节点内容是否需要本地化（均不支持）</li>
+</ul>
+<p><strong>在页面上隐藏元素的方法</strong></p>
+<ul>
+<li><p><strong>占位:</strong></p>
+<ul>
+<li>visibility: hidden</li>
+<li>margin-left: -100%;</li>
+<li>opacity: 0;</li>
+<li>transform: scale(0);</li>
+</ul>
+</li>
+<li><p><strong>不占位:</strong></p>
+<ul>
+<li>display: none;</li>
+<li>width: 0; height: 0; overflow: hidden;</li>
+</ul>
+</li>
+<li><p><strong>仅对块内文本元素:</strong></p>
+<ul>
+<li>text-indent: -9999px;</li>
+<li>font-size: 0;</li>
+</ul>
+</li>
+</ul>
+<p><strong>HTML5的文件离线存储怎么使用，工作原理是什么？</strong></p>
+<p>如何使用：在页面的头部加一个manifest的文件像这样（</p>
+<html manifest="cache.manifest">）然后在cache.manifest文件中加入如下代码：
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line">#v1.0.5</span><br><span class="line"></span><br><span class="line">#需要缓存的文件</span><br><span class="line">CACHE:</span><br><span class="line">js/app.js</span><br><span class="line">css/style.css</span><br><span class="line"></span><br><span class="line">#不需要缓存的文件</span><br><span class="line">NETWORK:</span><br><span class="line">resourse/logo.png</span><br><span class="line"></span><br><span class="line">#无法访问页面</span><br><span class="line">FALLBACK:</span><br><span class="line"><span class="number">404.</span>html</span><br></pre></td></tr></table></figure>
+
+<p><strong>CSS选择器有哪些？可继承的有哪些？</strong></p>
+<p>其实可以分为三大类：ID选择器，class选择器，标签选择器</p>
+<p>它们又可以以不同的方式进行组合：后代选择器（父代名 后代名 {属性名：属性值}），</p>
+<p>子代选择器（父代名&gt;子代名 {属性名：属性值}），群组选择器：#name1, .name2 , #name div {属性名：属性值}，伪类选择器：name：伪类，通用选择器：*{属性名：属性值；}…</p>
+<p><strong>可继承的：</strong></p>
+<ul>
+<li>字体系列属性<ul>
+<li>font：组合字体</li>
+<li>font-family：规定元素的字体系列</li>
+<li>font-weight：设置字体的粗细</li>
+<li>font-style：定义字体的风格</li>
+<li>font-variant：设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。</li>
+<li>font-stretch：允许你使文字变宽或变窄，所有主流浏览器都不支持</li>
+<li>font-size-adjust：为某个元素规定一个aspect值，这样就可以保持首选字体的 x-height。</li>
+</ul>
+</li>
+<li>文本系列属性<ul>
+<li>text-indent：文本缩进</li>
+<li>text-align：文本水平对齐</li>
+<li>line-height：行高</li>
+<li>word-spacing：增加或减少单词间的空白（即字间隔）</li>
+<li>letter-spacing：增加或减少字符间的空白（字符间距）</li>
+<li>text-transform：控制文本大小写</li>
+<li>direction：规定文本的书写方向</li>
+<li>color：文本颜色</li>
+</ul>
+</li>
+<li>元素可见性：visibility</li>
+<li>表格布局属性：caption-side，border-collapse，border-spacing，empty-cells，table-layout</li>
+<li>列表属性：list-style-type，list-style-image，list-style-position，list-style</li>
+<li>生成内容属性：quotes</li>
+<li>光标属性：cursor</li>
+<li>页面样式属性：page，page-break-inside，Windows，orphans</li>
+<li>声音样式属性：speak，speak-punctuation，speak-numeral，speak-header， speech-rate，volume，voice-family，pitch，pitch-range，stress，richness，azimuth，elevation</li>
+</ul>
+<p><strong>简述超链接target属性的取值和作用</strong></p>
+<ul>
+<li>_self：默认属性，在当前窗口或者框架中加载目标文档</li>
+<li>_blank：打开新的窗口或者新的标签页，在使用这个属性的时候，最好添加rel=”noopener noreferrer”属性，防止打开的新窗口对原窗口进行的篡改，防止window.opener API的恶意行为</li>
+<li>_parent：在frame或者iframe中使用较多，在父级框架中载入目标文档，当a标签本身在顶层时，与_self相同</li>
+<li>_top：在frame或者iframe中使用较多，直接在顶层的框架中载入目标文档，加载整个窗口</li>
+</ul>
+<p><strong>label都有哪些作用？</strong></p>
+<ul>
+<li>&lt;label&gt; 标签为 input 元素定义标注（标记）。label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。&lt;label&gt; 标签的 for 属性应当与相关元素的 id 属性相同。</li>
+</ul>
+<p><strong>border属性</strong></p>
+<ul>
+<li><p>border属性其实是由三角形组合而成</p>
+</li>
+<li><pre><code class="css"><span class="selector-tag">div</span> {
+    <span class="attribute">width</span>: <span class="number">0</span>;
+    <span class="attribute">height</span>: <span class="number">0</span>;
+    <span class="attribute">border</span>: <span class="number">40px</span> solid;
+    <span class="attribute">border-color</span>: orange blue red green;
+}
+
+&lt;!<span class="selector-tag">--</span>￼20<span class="selector-tag">--</span>&gt;
+</code></pre>
+</li>
+</ul>
+<p><strong>写一个去除制表符和换行符的方法</strong></p>
+<ul>
+<li><pre><code class="javascript">\f  匹配换页字符。
+\n  匹配换行字符。
+\r  匹配回车符字符。
+\t  匹配制表字符。
+\v  匹配垂直制表符。
+str.replace(<span class="regexp">/[\t\n\v\r\f]/g</span>, <span class="string">""</span>)
+
+&lt;!--￼<span class="number">21</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<p><strong>BFC规范</strong></p>
+<ul>
+<li>内部和外部元素互不干扰，各自渲染，让内外部布局不影响</li>
+</ul>
+<p><strong>两种方法实现浏览器多个标签页之间的通信</strong></p>
+<ul>
+<li><p><strong>方法一</strong>：在一个标签页中添加修改删除localstorage，都会触发一个storage事件，通过在另一个标签页中监听storage事件，即可获得localStorage存储的值</p>
+</li>
+<li><pre><code class="html">标签页1：
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span>
+<span class="javascript">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{  </span>
+<span class="javascript">        $(<span class="string">"#btn"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{  </span>
+<span class="javascript">            <span class="keyword">var</span> name=$(<span class="string">"#name"</span>).val();  </span>
+<span class="javascript">            localStorage.setItem(<span class="string">"name"</span>, name); </span>
+        });  
+    });  
+<span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+
+<span class="comment"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```html</span><br><span class="line">	标签页2</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		$(function()&#123; </span><br><span class="line">			window.addEventListener(&quot;storage&quot;, function(event)&#123;  </span><br><span class="line">				console.log(event.key + &quot;=&quot; + event.newValue);  </span><br><span class="line">			&#125;);   </span><br><span class="line">		&#125;);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></span></code></pre>
+</li>
+<li><p><strong>方法二</strong>： 使用cookie+setInterval，将要传递的信息存储在cookie中，每隔一定时间读取cookie信息，即可随时获取要传递的信息 </p>
+</li>
+<li><pre><code class="html">标签页1
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span>
+<span class="javascript">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{  </span>
+<span class="javascript">        $(<span class="string">"#btn"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{  </span>
+<span class="javascript">            <span class="keyword">var</span> name=$(<span class="string">"#name"</span>).val();  </span>
+<span class="javascript">            <span class="built_in">document</span>.cookie=<span class="string">"name="</span>+name;  </span>
+        });  
+    });  
+<span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+
+<span class="comment"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```html</span><br><span class="line">	标签页2</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		$(function()&#123; </span><br><span class="line">			function getCookie(key) &#123;  </span><br><span class="line">				return JSON.parse(&quot;&#123;\&quot;&quot; + document.cookie.replace(/;\s+/gim,&quot;\&quot;,\&quot;&quot;).replace(/=/gim, &quot;\&quot;:\&quot;&quot;) + &quot;\&quot;&#125;&quot;)[key];  </span><br><span class="line">			&#125;   </span><br><span class="line">			setInterval(function()&#123;  </span><br><span class="line">				console.log(&quot;name=&quot; + getCookie(&quot;name&quot;));  </span><br><span class="line">			&#125;, 10000);  </span><br><span class="line">		&#125;);</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></span>
+</code></pre>
+</li>
+</ul>
+<p><strong>优雅降级和渐进增强</strong></p>
+<ul>
+<li>优雅降级：先不考虑兼容，优先最新浏览器的效果，然后在逐渐兼容低版本的浏览器</li>
+<li>渐进增强：以较低的浏览器效果为主，之后再逐渐增加对新浏览器的支持，以内容为主。</li>
+</ul>
+<p><strong>类型检测</strong>:由于typeof的缺点比较多，数组，null，等等</p>
+<ul>
+<li><pre><code class="html"><span class="tag">&lt;<span class="name">script</span>&gt;</span>
+<span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">typeC</span>(<span class="params">obj</span>)</span>{</span>
+<span class="javascript">      <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).replace(<span class="regexp">/\[object\s|\]/g</span>,<span class="string">''</span>);</span>
+    }
+<span class="javascript">    <span class="built_in">console</span>.log(tostr([]));</span>
+<span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/04/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9C%8B%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/01/%E6%8B%9B%E8%81%98%E8%A6%81%E6%B1%82/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">招聘要求</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -200,8 +775,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

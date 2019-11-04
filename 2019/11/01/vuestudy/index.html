@@ -213,12 +213,12 @@
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
   <span class="tag">&lt;<span class="name">script</span>&gt;</span>
-    const app = new Vue({
-      el: '#app',
+<span class="javascript">    <span class="keyword">const</span> app = <span class="keyword">new</span> Vue({</span>
+<span class="javascript">      el: <span class="string">'#app'</span>,</span>
       data: {
-        message:'i love code',
-        first:'firstname',
-        second:'lastname',
+<span class="javascript">        message:<span class="string">'i love code'</span>,</span>
+<span class="javascript">        first:<span class="string">'firstname'</span>,</span>
+<span class="javascript">        second:<span class="string">'lastname'</span>,</span>
         content:100
       }
     })
@@ -744,6 +744,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
